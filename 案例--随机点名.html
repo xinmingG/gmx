@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let arr = ['赵云', '关羽', '黄忠', '马超', '刘备', '曹操', '廉颇']
+        // let random = Math.floor(Math.random() * arr.length)
+        // document.write(arr[random])
+        // arr.splice(random, 1)
+        // console.log(arr);
+
+        //  猜数字游戏
+        let random = Math.floor(Math.random() * 9) + 1
+        let flag = true // 开关变量，用来控制整个循环结束后循环外面的判断语句
+        // console.log(random);
+        for (let i = 1; i <= 3; i++) {
+            let num = +prompt('请输入一个1~10之间的数猜大小')
+            if (num > random) {
+                alert('你猜大了,dd减一公分')
+            } else if (num < random) {
+                alert('你猜小了,你的外卖单数减一单')
+            } else if (num === random) {
+                flag = false
+                alert('恭喜你，猜对了，奖励你一个大嘴巴子')
+                break
+            }
+        }
+        if (flag) {
+            alert('弱鸡')
+        }
+    </script>
+</body>
+
+</html>
